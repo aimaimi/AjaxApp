@@ -6,8 +6,9 @@ function check() {
     if (post.getAttribute("data-load") != null) {
       return null;
     }
+
     post.setAttribute("data-load", "true");
-    post.addEventListener("click", (e) => { 
+    post.addEventListener("click", (e) => {
       const postId = post.getAttribute("data-id");
       const XHR = new XMLHttpRequest();
       XHR.open("GET", `/posts/${postId}`, true);
